@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="game">
+      <div id="backgroundimg" class="hide">
+        <h1 id="heading">Rock Paper Scissors-Roulette</h1>
+        <button id="playbtn">Play</button>
+      </div>
+
+      <div id="gameContainer" class="hide">
+        <div class="background">
+          <div class="game-info">
+
+            <div class="game-buttons">
+              <p id="choosemsg">Choose your play:</p>
+              <button class="btn" id="rock"></button>
+              <button class="btn" id="paper"></button>
+              <button class="btn" id="scissors"></button>
+            </div>
+
+            <div id="results" class="hide">
+              <p id="message"></p>
+              <p id="playerChoice"></p>
+              <p id="computerChoice"></p>
+              <button class="hide" id="spinbtn">Spin the barrel</button>
+              <p class="hide" id="rouletteMessage"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div id="roulette" class="hide"></div>
+    
+    <div>
+      <video src="rock-move.mp4" preload="auto" loop id="rockMove" class="video hide"></video>
+    </div>
+    <div>
+      <video src="paper-move.mp4" preload="auto" loop id="paperMove" class="video hide"></video>
+    </div>
+    <div>
+      <video src="scissor-move.mp4" preload="auto" loop id="scissorsMove" class="video hide"></video>
+    </div>
+    <div>
+      <video src="computer-bang.mp4" preload="auto" loop id="computerBang" class="video hide"></video>
+    </div>
+    <div>
+      <video src="player-bang.mp4" preload="auto" loop id="playerBang" class="video hide"></video>
+    </div>
+    <div>
+      <video src="computerEmpty.mp4" preload="auto" loop id="computerEmpty" class="video hide"></video>
+    </div>
+    <div>
+      <video src="playerEmpty.mp4" preload="auto" loop id="playerEmpty" class="video hide"></video>
+    </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
