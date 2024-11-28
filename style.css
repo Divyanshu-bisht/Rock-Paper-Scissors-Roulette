@@ -137,13 +137,6 @@
     padding-top: 3vh;
 }
 
-#roulette{
-    background-image: url(roulette.gif);
-    height: 100vh;
-    background-size: 100% 100%;
-    text-align: center;
-}
-
 .hide{
     display: none;
 }
