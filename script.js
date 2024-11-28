@@ -87,7 +87,7 @@ const showWinner = (userWin, userChoice, compChoice) => {
         message.innerText = `You Won. Computer is spinning the barrel.`;
         message.style.color = "white";
         playerChoose.innerText = `You choose: ${userChoice}`;
-        computerChoose.innerText = `Computer choose ${compChoice}`;
+        computerChoose.innerText = `Computer choose: ${compChoice}`;
         disableButtons();
 
         random2 = genChoice();
@@ -96,13 +96,13 @@ const showWinner = (userWin, userChoice, compChoice) => {
                 computerEmpty.classList.remove("hide");
                 computerEmpty.play();
                 gameContainer.classList.add("hide");
-            }, 4000);
+            }, 2000);
 
             setTimeout(function () {
                 computerEmpty.classList.add("hide");
                 computerEmpty.pause();
                 gameContainer.classList.remove("hide");
-            }, 9000);
+            }, 7000);
             enableButtons();
 
             setTimeout(function () {
@@ -110,13 +110,11 @@ const showWinner = (userWin, userChoice, compChoice) => {
                 rouletteMessage.classList.remove("hide");
                 rouletteMessage.innerText = `Computer survived. Happiness gone.`;
                 rouletteMessage.style.color = "white";
-            }, 9000);
+            }, 7000);
             setTimeout(function () {
                 result.classList.add("hide");
                 rouletteMessage.classList.add("hide");
-            }, 11000);
-            reset();
-
+            }, 9000);
         }
 
         else {
@@ -124,13 +122,13 @@ const showWinner = (userWin, userChoice, compChoice) => {
                 computerBang.classList.remove("hide");
                 computerBang.play();
                 gameContainer.classList.add("hide");
-            }, 4000);
+            }, 2000);
 
             setTimeout(function () {
                 computerBang.classList.add("hide");
                 computerBang.pause();
                 gameContainer.classList.remove("hide");
-            }, 9000);
+            }, 7000);
             enableButtons();
 
             setTimeout(function () {
@@ -138,12 +136,11 @@ const showWinner = (userWin, userChoice, compChoice) => {
                 rouletteMessage.classList.remove("hide");
                 rouletteMessage.innerText = `Computer got shot. ******.`;
                 rouletteMessage.style.color = "red";
-            }, 9000);
+            }, 7000);
             setTimeout(function () {
                 result.classList.add("hide");
                 rouletteMessage.classList.add("hide");
-            }, 11000);
-            reset();
+            }, 9000);
         }
 
     } else {
@@ -184,6 +181,10 @@ const playGame = (userChoice) => {
         setTimeout(function () {
             drawGame(userChoice, compChoice);
         }, 2000);
+
+        setTimeout(function () {
+            reset();
+        }, 7000);
     }
     else {
         let userWin = true;
@@ -199,21 +200,12 @@ const playGame = (userChoice) => {
         }
         setTimeout(function () {
             showWinner(userWin, userChoice, compChoice);
-        }, 2000);
+        }, 5000);
     }
 };
 
 spinbtn.addEventListener("click", () => {
     const random = genChoice();
-    setTimeout(function () {
-        roulette.classList.remove("hide");
-        gameContainer.classList.add("hide");
-    }, 0);
-
-    setTimeout(function () {
-        roulette.classList.add("hide");
-    }, 2500);
-
     setTimeout(function () {
 
         if (random === 0) {
@@ -227,7 +219,7 @@ spinbtn.addEventListener("click", () => {
                 playerEmpty.classList.add("hide");
                 playerEmpty.pause();
                 gameContainer.classList.remove("hide");
-            }, 4000);
+            }, 5000);
 
         }
         else {
@@ -241,9 +233,9 @@ spinbtn.addEventListener("click", () => {
                 playerBang.classList.add("hide");
                 playerBang.pause();
                 gameContainer.classList.remove("hide");
-            }, 4000);
+            }, 5000);
         }
-    }, 2500);
+    }, 0);
 
     setTimeout(function () {
         gameContainer.classList.remove("hide");
@@ -261,12 +253,12 @@ spinbtn.addEventListener("click", () => {
             rouletteMessage.style.color = "red";
         }
 
-    }, 6500);
+    }, 5000);
 
     setTimeout(function () {
         reset();
 
-    }, 9000);
+    }, 7000);
 
 });
 
